@@ -1,0 +1,67 @@
+
+@mixin flexPosition($justCont: center, $alignItem: center , $direction:row) {
+    display: flex;
+    justify-content: $justCont;
+    align-items: $alignItem;
+    flex-direction: $direction;
+}
+
+
+@mixin response($breakpoint) {
+    @if($breakpoint == 2xl) {
+        @media(max-width: 1399.98px) {
+            @content;
+        }
+    }
+    @if($breakpoint == xl) {
+        @media(max-width: 1199.98px) {
+            @content;
+        }
+    }
+    
+    @if($breakpoint == lg) {
+        @media(max-width:991.98px) {
+            @content;
+        }
+    }
+    
+    @if($breakpoint == md) {
+        @media(max-width: 767.98px) {
+            @content;
+        }
+    }
+    
+    @if($breakpoint == sm) {
+        @media(max-width: 575.98px) {
+            @content;
+        }
+    }
+}
+
+@mixin card($color:color(white), $radius:2px){
+    background:$color;
+    border-radius: $radius;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
